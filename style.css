@@ -1,0 +1,37 @@
+html {
+font-family: roboto,sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+#controls{
+    width: 25%;
+    display: block;
+}
+.slider{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: #d3d3d3;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    cursor: pointer;
+  }
+
+.slider::-moz-range-thumb {
+    cursor: pointer;
+  }
+
+#sliderLabelLab{
+    float: left;
+}
+#sliderLabelCoal{
+    float: right;
+}
+
+#controlExplainer, #natSwingTowardsText, #nat2PPTowardsText {
+    font-style: italic;
+    font-size: small;
+}
