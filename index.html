@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Australian Election Swing Calculator</title>
 </head>
 
@@ -12,6 +13,7 @@
     <h1>Australian Election Swing Calculator</h1>
     <div id="controls">
         <div class="natSwingSlider">
+            <span id="sliderLabelLab">Labor</span><span id="sliderLabelCoal">Coalition</span><br>
             <input type="range" name="natSwingSlider" min="-20.00" max="20.00" step="0.1" value="0.00" class="slider"
                 id="nationalSwingSlider">
         </div>
@@ -27,35 +29,8 @@
         Seats won by other parties: <span id="othSeatsWon"></span><br>
     </div>
     <div id="changedSeats">
-        <table style="width: 90vw; margin: auto;" class="table">
-            <thead>
-                <tr id="tableHeader">
-                </tr>
-            </thead>
-            <tbody id="tableBody">
-            </tbody>
-        </table>
     </div>
-
-    <script>
-        var nationalSwingSlider = document.getElementById("nationalSwingSlider");
-        var nationalSwing = document.getElementById("nationalSwing")
-        var nat2PP = 51.53;
-        var coalSeats = 77;
-        var labSeats = 68;
-        var othSeats = 6;
-        var nat2PPafterswing = nat2PP;
-        document.getElementById("national2PP").innerText = nat2PPafterswing;
-        document.getElementById("coalSeatsWon").innerText = coalSeats;
-        document.getElementById("labSeatsWon").innerText = labSeats;
-        document.getElementById("othSeatsWon").innerText = othSeats;
-        nationalSwing.innerText = nationalSwingSlider.value;
-        nationalSwingSlider.oninput = function () {
-            nationalSwing.innerText = this.value;
-            var nat2PPafterswing = nat2PP - nationalSwingSlider.value;
-            nat2PPafterswing = nat2PPafterswing.toFixed(2);
-            document.getElementById("national2PP").innerText = nat2PPafterswing;
-        };
+    <script src="/SwingCalc.js">
     </script>
 </body>
 
