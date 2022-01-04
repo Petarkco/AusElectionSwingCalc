@@ -18,6 +18,8 @@ document.getElementById("othSeatsWon").innerText = othSeats;
 document.getElementById("natSwingTowardsText").innerText = swingAmount;
 document.getElementById("nat2PPTowardsText").innerText = swingTowards;
 
+Papa.parse("/2019-FederalResults.csv", {})
+
 nationalSwing.innerText = nationalSwingSlider.value;
 nationalSwingSlider.oninput = function () {
     nationalSwing.innerText = this.value;
